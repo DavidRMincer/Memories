@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Frame_Script : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Frame_Script : MonoBehaviour
     {
         prevMat = rend.material;
 
-        LoadScene(0);
+        //LoadScene(0);
     }
 
     public IEnumerator FadePhoto()
@@ -52,6 +53,7 @@ public class Frame_Script : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
+        Debug.Log("CLICKED");
         currentScene = Instantiate(listofScenes[sceneIndex], sceneSpawnPoint.transform);
 
         StartCoroutine(FadePhoto());
