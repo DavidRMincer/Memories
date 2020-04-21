@@ -2218,7 +2218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 880.6207, y: -271.46683}
+  scrollPos: {x: 794.6832, y: -427.71683}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
@@ -2229,7 +2229,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 1064730863}
   selectedCommands: []
   variables:
   - {fileID: 1064730405}
@@ -19506,7 +19507,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 137.95944
-    y: 918.06146
+    y: 919.62396
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -20156,7 +20157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1389
   indentLevel: 0
-  text: crawl around
+  text: crawl forward
   description: 
   targetBlock: {fileID: 1064730863}
   hideIfVisited: 0
@@ -20181,7 +20182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1388
   indentLevel: 0
-  text: climb over
+  text: sneak forward
   description: 
   targetBlock: {fileID: 1064730863}
   hideIfVisited: 0
@@ -20576,7 +20577,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730931
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20594,7 +20595,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730932
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20612,7 +20613,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730933
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20631,7 +20632,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1064730934
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20703,7 +20704,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1064730937
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20722,7 +20723,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1064730938
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20740,7 +20741,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730939
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20761,7 +20762,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1064730940
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22129,7 +22130,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1064730991
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22148,7 +22149,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1064730992
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22166,7 +22167,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730993
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22185,7 +22186,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1064730994
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22203,7 +22204,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730995
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22221,7 +22222,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730996
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22240,7 +22241,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1064730997
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22258,7 +22259,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1064730998
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -22277,7 +22278,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1064730999
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
