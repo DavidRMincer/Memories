@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Fungus;
 
 public class Frame_Script : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Frame_Script : MonoBehaviour
     public Renderer rend;
     public GameObject sceneSpawnPoint;
     public List<GameObject> listofScenes;
+    public CameraManager_Script cameraManager;
+    public Fungus.Flowchart flowchart;
+
+    internal SceneControls_script currentSceneControls;
 
     private Material prevMat;
     private GameObject currentScene;
@@ -20,7 +25,12 @@ public class Frame_Script : MonoBehaviour
         //LoadScene(0);
     }
 
-    public IEnumerator FadePhoto()
+    public void FadePhoto(float duration)
+    {
+        StartCoroutine(FadePhotoIEnum(duration));
+    }
+
+    public IEnumerator FadePhotoIEnum(float duration)
     {
         Debug.Log(true);
         //Color prevColour = rend.material.color,
@@ -34,13 +44,13 @@ public class Frame_Script : MonoBehaviour
 
         //rend.material.Lerp(prevMat, invisibleMat, fadeDuration);
 
-        while (counter < fadeDuration)
+        while (counter < duration)
         {
             Debug.Log(alpha);
-            counter = (counter > fadeDuration) ? fadeDuration : counter + Time.deltaTime;
+            counter = (counter > duration) ? duration : counter + Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
 
-            alpha = Mathf.Lerp(prevAlpha, newAlpha, counter / fadeDuration);
+            alpha = Mathf.Lerp(prevAlpha, newAlpha, counter / duration);
             rend.material.color = new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, alpha);
 
             //rend.material.Lerp(prevMat, invisibleMat, counter / fadeDuration);
@@ -51,11 +61,43 @@ public class Frame_Script : MonoBehaviour
         yield return null;
     }
 
+    public IEnumerator UnloadCurrentScene()
+    {
+        yield return new WaitForSeconds(fadeDuration + 1f);
+        Destroy(currentScene);
+    }
+
     public void LoadScene(int sceneIndex)
     {
-        Debug.Log("CLICKED");
         currentScene = Instantiate(listofScenes[sceneIndex], sceneSpawnPoint.transform);
+        currentSceneControls = currentScene.GetComponent<SceneControls_script>();
 
-        StartCoroutine(FadePhoto());
+        //StartCoroutine(FadePhotoIEnum(fadeDuration));
+    }
+
+    public void UnloadScene()
+    {
+        //StartCoroutine(FadePhotoIEnum(fadeDuration));
+        StartCoroutine(UnloadCurrentScene());
+    }
+
+    public void ActivateScenePhase(int index)
+    {
+        currentSceneControls.ActivatePhase(index);
+    }
+
+    public void DeactivateScenePhases()
+    {
+        currentSceneControls.DeactivateAllPhases();
+    }
+
+    public void TransisitionSceneCam(int index, float duration)
+    {
+        cameraManager.Transition(currentSceneControls.cameras[index], duration);
+    }
+
+    public void LoadFungusBlock(string blockName)
+    {
+        flowchart.ExecuteBlock(blockName);
     }
 }

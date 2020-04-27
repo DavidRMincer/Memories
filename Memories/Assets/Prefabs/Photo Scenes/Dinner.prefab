@@ -126,6 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 798963432322492853}
+  - component: {fileID: 4211774635760917103}
   m_Layer: 0
   m_Name: Dinner
   m_TagString: Untagged
@@ -154,6 +155,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4211774635760917103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798963432322492842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2ab653b4404aa43b55d38ebc16278a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phases:
+  - {fileID: 7909665759351135149}
+  - {fileID: 4199064597059857011}
+  - {fileID: 484303373715357344}
+  - {fileID: 6219617175410555542}
+  cameras:
+  - {fileID: 6217099887590700160}
+  - {fileID: 2011849429611962895}
+  - {fileID: 8672117911842106184}
+  - {fileID: 4158783367308627346}
+  - {fileID: 6123740521107459084}
+  - {fileID: 5415464597046940749}
+  - {fileID: 4155714900375194771}
+  - {fileID: 8860899559367382930}
+  - {fileID: 745340122984496142}
 --- !u!1 &798963432477883345
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2620545175023535939
 Transform:
   m_ObjectHideFlags: 0

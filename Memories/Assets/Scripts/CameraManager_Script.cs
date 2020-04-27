@@ -7,6 +7,7 @@ public class CameraManager_Script : MonoBehaviour
     public Camera mainCam;
     public AnimationCurve camAccelerationCurve;
     public Camera[] cameras;
+    public GameObject photoMenu;
 
     private void Start()
     {
@@ -56,5 +57,10 @@ public class CameraManager_Script : MonoBehaviour
         }
         
         yield return null;
+    }
+
+    public void SetPhotoMenuActive(bool active)
+    {
+        photoMenu.SetActive(active);
     }
 }

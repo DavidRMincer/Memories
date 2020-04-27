@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class SceneControls_script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] phases;
+    public Camera[] cameras;
+
+    public void ActivatePhase(int index)
     {
-        
+        for (int i = 0; i < phases.Length; ++i)
+        {
+            phases[i].SetActive(i == index);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeactivateAllPhases()
     {
-        
+        foreach (var item in phases)
+        {
+            item.SetActive(false);
+        }
     }
 }
