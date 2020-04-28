@@ -8,10 +8,12 @@ public class CameraManager_Script : MonoBehaviour
     public AnimationCurve camAccelerationCurve;
     public Camera[] cameras;
     public GameObject photoMenu;
+    public Animator trainAnimator;
 
     private void Start()
     {
         //Transition(cameras[7], 6);
+        trainAnimator.enabled = false;
     }
 
     public void Transition(Camera newCam, float duration)
@@ -62,5 +64,10 @@ public class CameraManager_Script : MonoBehaviour
     public void SetPhotoMenuActive(bool active)
     {
         photoMenu.SetActive(active);
+    }
+
+    public void PlayTrain()
+    {
+        trainAnimator.enabled = true;
     }
 }
