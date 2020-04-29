@@ -78,7 +78,8 @@ public class Frame_Script : MonoBehaviour
     public void UnloadScene()
     {
         //StartCoroutine(FadePhotoIEnum(fadeDuration));
-        StartCoroutine(UnloadCurrentScene());
+        //StartCoroutine(UnloadCurrentScene());
+        Destroy(currentScene);
     }
 
     public void ActivateScenePhase(int index)
