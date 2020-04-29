@@ -7,6 +7,7 @@ public class PhotoMenu_Script : MonoBehaviour
 {
     public Button[] buttons;
     public Sprite[] postSceneSprites;
+    public TMPro.TextMeshProUGUI mainText;
 
     private int sceneCounter = 0;
 
@@ -20,5 +21,24 @@ public class PhotoMenu_Script : MonoBehaviour
         {
             buttons[5].gameObject.SetActive(true);
         }
+    }
+
+    private IEnumerator FadeTextIEnum(Color newColour, float duration)
+    {
+        Color oldColour = mainText.color;
+        float counter = 0f;
+
+        do
+        {
+            counter = (counter + Time.deltaTime > duration) ? duration : counter + Time.deltaTime;
+            yield return new WaitForSeconds(Time.deltaTime);
+
+            mainText.color = Color.Lerp(oldColour, newColour, counter / duration);
+        } while (counter < duration);
+    }
+
+    public void FadeText(Color newColour, float duration)
+    {
+        StartCoroutine(FadeTextIEnum(newColour, duration));
     }
 }
