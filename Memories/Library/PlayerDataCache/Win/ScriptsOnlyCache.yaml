@@ -2601,4 +2601,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Documents/Coursework/Masters Work/Narrative/Can We Be Friends, Again/Memories.exe
+  playerPath: D:/Documents/Coursework/Masters Work/Narrative/Can We Be Friends, Again/Can
+    We Be Friends, Again.exe
